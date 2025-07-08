@@ -1,0 +1,10 @@
+대분류,재무지표명,단위,산식(AccountID),account_ids
+Growth,매출액증가율(YoY),%,(ifrs_full_Revenue[t]-ifrs_full_Revenue[t-1])/ABS(ifrs_full_Revenue[t-1]),ifrs_full_Revenue
+Growth,영업이익증가율(YoY),%,(dart_OperatingIncomeLoss[t]-dart_OperatingIncomeLoss[t-1])/ABS(dart_OperatingIncomeLoss[t-1]),dart_OperatingIncomeLoss
+Profitability,영업이익률,%,dart_OperatingIncomeLoss/ifrs_full_Revenue*100,"dart_OperatingIncomeLoss,ifrs_full_Revenue"
+Profitability,순이익률,%,ifrs_full_ProfitLoss/ifrs_full_Revenue*100,"ifrs_full_ProfitLoss,ifrs_full_Revenue"
+Stability,부채비율,%,ifrs_full_Liabilities/ifrs_full_Equity*100,"ifrs_full_Liabilities,ifrs_full_Equity"
+Stability,유동비율,%,ifrs_full_CurrentAssets/ifrs_full_CurrentLiabilities*100,"ifrs_full_CurrentAssets,ifrs_full_CurrentLiabilities"
+Activity,총자산회전율,회,ifrs_full_Revenue[t]/((ifrs_full_Assets[t]+ifrs_full_Assets[t-1])/2),"ifrs_full_Revenue,ifrs_full_Assets"
+Profitability,ROE,%,ifrs_full_ProfitLoss[t]/((ifrs_full_Equity[t]+ifrs_full_Equity[t-1])/2)*100,"ifrs_full_ProfitLoss,ifrs_full_Equity"
+Cashflow,영업현금흐름,백만원,ifrs_full_CashFlowsFromUsedInOperatingActivities,ifrs_full_CashFlowsFromUsedInOperatingActivities

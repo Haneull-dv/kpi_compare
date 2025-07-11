@@ -14,11 +14,11 @@ COPY ./requirements.txt .
 # 5. 의존성 설치
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 6. 실행 디렉토리로 이동
-WORKDIR /app/app
+# 6. 작업 디렉토리 고정 (app 디렉토리 기준으로)
+WORKDIR /app
 
-# 7. 앱 실행
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9007"]
+# 7. 앱 실행 (main.py 기준)
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "9007"]
 
 # 8. 포트 노출
 EXPOSE 9007

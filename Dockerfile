@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # 4. 소스 코드 및 의존성 복사
-COPY ./app ./app
+COPY ./app /app/app
 COPY ./requirements.txt .
 
 # 5. 패키지 설치
